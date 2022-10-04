@@ -20,7 +20,7 @@ def main():
     val_dataset = CommonVoiceDataset('dev', args.cv_dir, n_rows=10)
     val_loader = DataLoader(val_dataset, batch_size=8, shuffle=True, num_workers=4, collate_fn=pad_batch)
 
-    trainer = pl.Trainer(accelerator='gpu', devices=[1], max_epochs=1)
+    trainer = pl.Trainer(accelerator='gpu', devices=[1], max_epochs=1, default_root_dir=args.log_dir)
 
     trainer.fit(wav2vec2model, train_loader, val_loader)
 
