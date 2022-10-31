@@ -19,7 +19,7 @@ print(f'Getting MNIST from: {args.mnist} contains:')
 print(os.listdir(args.mnist))
 print(f'Checkpoint location: {args.checkpoint}')
 
-dataset = MNIST(args.mnist, train=True, download=False, transform=transforms.ToTensor())
+dataset = MNIST(args.mnist, train=True, download=True, transform=transforms.ToTensor())
 
 mnist_test = MNIST(args.mnist, train=False, download=False, transform=transforms.ToTensor())
 
