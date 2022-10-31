@@ -5,6 +5,7 @@ __pycache__/
 
 lightning_logs/
 MNIST/
+cpt/
 
 # C extensions
 *.so
@@ -17,7 +18,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+#lib/
 lib64/
 parts/
 sdist/
