@@ -16,7 +16,7 @@ batch_size = 4096
 args = parse_arguments()
 
 print(f'Getting MNIST from: {args.mnist}')
-print(f'Checkpoint location: {args.ccheckpoint}')
+print(f'Checkpoint location: {args.checkpoint}')
 
 dataset = MNIST(args.mnist, train=True, download=False, transform=transforms.ToTensor())
 
