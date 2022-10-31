@@ -22,7 +22,8 @@ print(f'Checkpoint location: {args.checkpoint}')
 #dataset = MNIST(args.mnist, train=True, download=False, transform=transforms.ToTensor())
 dataset = MNIST(os.getcwd(), train=True, download=True, transform=transforms.ToTensor())
 
-mnist_test = MNIST(args.mnist, train=False, download=False, transform=transforms.ToTensor())
+#mnist_test = MNIST(args.mnist, train=False, download=False, transform=transforms.ToTensor())
+mnist_test = MNIST(os.getcwd(), train=False, download=True, transform=transforms.ToTensor())
 
 mnist_train, mnist_val = random_split(dataset, [55000, 5000])
 
