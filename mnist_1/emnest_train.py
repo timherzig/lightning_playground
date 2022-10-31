@@ -15,6 +15,9 @@ batch_size = 4096
 
 args = parse_arguments()
 
+print(f'Getting MNIST from: {args.mnist}')
+print(f'Checkpoint location: {args.ccheckpoint}')
+
 dataset = MNIST(args.mnist, train=True, download=False, transform=transforms.ToTensor())
 
 mnist_test = MNIST(args.mnist, train=False, download=False, transform=transforms.ToTensor())
@@ -24,7 +27,6 @@ mnist_train, mnist_val = random_split(dataset, [55000, 5000])
 train_loader = DataLoader(mnist_train, batch_size=batch_size)
 test_loader = DataLoader(mnist_test, batch_size=batch_size)
 val_loader = DataLoader(mnist_val, batch_size=batch_size)
-
 
 model = Emnest_AutoEncoder(batch_size=batch_size, learning_rate=1e-3)
 
