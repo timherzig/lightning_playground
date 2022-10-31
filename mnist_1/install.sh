@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # make sure only first task per node installs stuff, others wait
-DONEFILE="/cpt/install_done_${SLURM_JOBID}"
+DONEFILE="/netscratch/$USER/mnist_1/install_done_${SLURM_JOBID}"
 if [[ $SLURM_LOCALID == 0 ]]; then
   
   # put your install commands here:
