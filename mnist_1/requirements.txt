@@ -1,5 +1,5 @@
 torch
-torchvision
-torchaudio
-pytorch-lightning
+# torchvision
+# torchaudio
+# pytorch-lightning
 lightning-bolts
